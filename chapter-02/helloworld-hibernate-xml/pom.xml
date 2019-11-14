@@ -4,28 +4,37 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.lewis.guides</groupId>
+    <groupId>org.lewis.book</groupId>
     <artifactId>helloworld-hibernate-xml</artifactId>
-    <description>2.3 原生 Hibernate 配置</description>
+    <version>1.0</version>
+    <description>section 2.2</description>
 
-    <parent>
-        <groupId>org.lewis.guides</groupId>
-        <artifactId>chapter-02</artifactId>
-        <version>1.0.0</version>
-    </parent>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <hibernate.version>5.3.10.Final</hibernate.version>
+        <h2.version>1.4.199</h2.version>
+        <junit.version>4.12</junit.version>
+    </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.version}</version>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
+            <version>${h2.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
